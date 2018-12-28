@@ -1,4 +1,4 @@
-# yes
+# Travel website
 
 > A Vue.js project
 
