@@ -22,25 +22,25 @@ export default {
       },
       swiperList: [{
         id: '0001',
-        imgUrl: require('imgs/6b1f0402bb1d5902.jpg')
+        imgUrl: require('imgs/Carousel/6b1f0402bb1d5902.jpg')
       }, {
         id: '0002',
-        imgUrl: require('imgs/8e5c4ab8ee8b7402.jpg')
+        imgUrl: require('imgs/Carousel/8e5c4ab8ee8b7402.jpg')
       }, {
         id: '0003',
-        imgUrl: require('imgs/30ffcf34e9819f02.jpg')
+        imgUrl: require('imgs/Carousel/30ffcf34e9819f02.jpg')
       }, {
         id: '0004',
-        imgUrl: require('imgs/72ce947f4dff4c02.jpg')
+        imgUrl: require('imgs/Carousel/72ce947f4dff4c02.jpg')
       }, {
         id: '0005',
-        imgUrl: require('imgs/5713e2a2ba72f902.jpg')
+        imgUrl: require('imgs/Carousel/5713e2a2ba72f902.jpg')
       }, {
         id: '0006',
-        imgUrl: require('imgs/806541e769362f02.jpg')
+        imgUrl: require('imgs/Carousel/806541e769362f02.jpg')
       }, {
         id: '0007',
-        imgUrl: require('imgs/a51fe403715df102.jpg')
+        imgUrl: require('imgs/Carousel/a51fe403715df102.jpg')
       }]
     }
   }
