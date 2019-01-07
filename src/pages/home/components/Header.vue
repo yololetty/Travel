@@ -1,17 +1,19 @@
 <template>
-    <div class="header">
-        <div class="header-left">
-          <div class="iconfont back-icon">&#xe624;</div>
-        </div>
-        <div class="header-input">
-          <span class="iconfont">&#xe632;</span>
-          输入城市/景点/游玩主题
-        </div>
-        <div class="header-right">
-          城市
-          <span class="iconfont arrow-icon">&#xeb6d;</span>
-        </div>
+  <div class="header">
+    <div class="header-left">
+      <div class="iconfont back-icon">&#xe624;</div>
     </div>
+    <div class="header-input">
+      <span class="iconfont">&#xe632;</span>
+      输入城市/景点/游玩主题
+    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        城市
+        <span class="iconfont arrow-icon">&#xeb6d;</span>
+      </div>
+    </router-link>
+  </div>
 </template>
 
 <script>
@@ -23,7 +25,7 @@ export default {
 <style lang="stylus" scoped>
   @import '~styles/varibles.styl'
   .header
-    line-height: 0.86rem
+    line-height: $headerHeight
     display: flex
     background: $bgColor
     color: #fff
@@ -38,7 +40,7 @@ export default {
       border-radius: .1rem
       margin-top: .12rem
       margin-left: .2rem
-      padding-left: 0.2rem
+      padding-left: .2rem
       height: .64rem
       line-height: .64rem
       background: #fff
@@ -47,6 +49,7 @@ export default {
       width: 1.24rem
       float: right
       text-align: center
+      color: #fff
       .arrow-icon
         margin-left: -.04rem
         font-size: .24rem
