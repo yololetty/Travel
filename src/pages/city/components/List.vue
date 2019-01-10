@@ -4,87 +4,17 @@
       <div class="area">
         <div class="title border-topbottom">热门城市</div>
         <div class="button-list">
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
-          </div>
-          <div class="button-wrapper">
-            <div class="button">北京</div>
+          <div class="button-wrapper" v-for="item of hot" :key="item.id">
+            <div class="button">{{item.name}}</div>
           </div>
         </div>
       </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-        </div>
-      </div>
-      <div class="area">
-        <div class="title border-topbottom">A</div>
-        <div class="item-list">
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
-          <div class="item">阿坝藏族羌族自治州</div>
+      <div class="area" v-for="(item, key) of cities" :key="key">
+        <div class="title border-topbottom">{{key}}</div>
+        <div class="list-wrapper">
+          <div class="item-list" v-for="innerItem of item" :key="innerItem.id">
+            <div class="item">{{innerItem.name}}</div>
+          </div>
         </div>
       </div>
     </div>
@@ -94,6 +24,10 @@
 import Bscroll from 'better-scroll'
 export default {
   name: 'CityList',
+  props: {
+    cities: Object,
+    hot: Array
+  },
   mounted () {
     this.scroll = new Bscroll(this.$refs.wrapper)
   }
@@ -139,7 +73,7 @@ export default {
       left: 33.33%
       border-left: .02rem solid #ddd
       border-right: .02rem solid #ddd
-    .item-list
+    .list-wrapper
       position: relative
       overflow: hidden
       .item
@@ -151,7 +85,7 @@ export default {
         float: left
         position: relative
         ellipsis()
-    .item-list:before
+    .list-wrapper:before
       content: ''
       position: absolute
       width: 25%
@@ -159,7 +93,7 @@ export default {
       left: 25%
       border-left: .02rem solid #ddd
       border-right: .02rem solid #ddd
-    .item-list:after
+    .list-wrapper:after
         content: '';
         position: absolute;
         width: 10%;
