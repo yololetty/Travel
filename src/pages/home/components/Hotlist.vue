@@ -18,35 +18,8 @@
 <script>
 export default {
   name: 'HomeHotlist',
-  data () {
-    return {
-      hotList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_250x250_0fc722c0.jpg',
-        sight: '故宫',
-        price: '￥20'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/71/71ace1aa7d971212a3.water.jpg_250x250_f35a11db.jpg',
-        sight: '故宫',
-        price: '￥20'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1511/d2/d2aec2dfc5aa771290.water.jpg_250x250_7b67daa3.jpg',
-        sight: '故宫',
-        price: '￥20'
-      }, {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1712/71/71ace1aa7d971212a3.water.jpg_250x250_f35a11db.jpg',
-        sight: '故宫',
-        price: '￥20'
-      }, {
-        id: '0005',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1511/d2/d2aec2dfc5aa771290.water.jpg_250x250_7b67daa3.jpg',
-        sight: '故宫',
-        price: '￥20'
-      }]
-    }
+  props: {
+    hotList: Array
   }
 }
 </script>
