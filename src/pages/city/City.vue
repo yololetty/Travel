@@ -1,6 +1,6 @@
 <template>
   <div class="main-page">
-    <city-header></city-header>
+    <default-header :title="title"></default-header>
     <city-search :cities="cities"></city-search>
     <city-list :cities="cities" :hot="hotCities" :letter="letter"></city-list>
     <city-alphabet :cities="cities" @change="handleLetterChange"></city-alphabet>
@@ -8,14 +8,14 @@
 </template>
 <script>
 import axios from 'axios'
-import CityHeader from './components/Header'
+import DefaultHeader from 'projects/Header'
 import CitySearch from './components/Search'
 import CityList from './components/List'
 import CityAlphabet from './components/Alphabet'
 export default {
   name: 'City',
   components: {
-    CityHeader,
+    DefaultHeader,
     CitySearch,
     CityList,
     CityAlphabet
@@ -24,7 +24,8 @@ export default {
     return {
       cities: {},
       hotCities: [],
-      letter: ''
+      letter: '',
+      title: '城市选择'
     }
   },
   methods: {
