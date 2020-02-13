@@ -1,5 +1,5 @@
 <template>
-  <div class="reservation-container">
+  <div class="reservation-container border-bottom">
     <div
      class="reservation-item"
      v-for="(item, index) in list"
@@ -13,15 +13,10 @@
           <img class="time-icon" src="https://img1.qunarzz.com/piao/fusion/1804/25/792e9929973a9902.png">
           {{item.time}}
         </div>
-        <div
-         class="left-info"
-        >
+        <div class="left-info">
           <span class="info-item">
             <img class="info-icon" src="https://img1.qunarzz.com/piao/fusion/1804/b0/c3cf2897c74ecc02.png">
             {{item.self}}
-          </span>
-          <span class="info-item">
-            {{item.replace}}
           </span>
           <span class="info-item">
             {{item.refund}}
@@ -71,17 +66,53 @@ export default {
         line-height: .52rem
         padding: 0
         font-size: .3rem
-        ellipsis()
+        ellipsis2()
       .left-time
+        display: inline-block
+        height: .32rem
+        line-height: .32rem
+        font-size: .24rem
+        white-space: nowrap;
         .time-icon
           display: inline-block
           width: .2rem
           max-height: .32rem
           margin-right: .04rem
           vertical-align: 0
-          font-size: .24rem;
-          line-height: .32rem;
-          white-space: nowrap;
+      .left-info
+        .info-item
+          display: inline-block
+          margin-top: .08rem
+          margin-right: .1rem
+          padding: 0 .04rem
+          height: .32rem
+          line-height: .32rem
+          color: #00afc7
+          font-size: .2rem
+          white-space: nowrap
+          border: 1px solid #a5e4ec
+          transform-origin: 0 0
+          border-radius: .08rem
+          .info-icon
+            display: inline-block
+            width: .2rem
+            max-height: .32rem
+            margin-right: .04rem
+            vertical-align: center
     .reservation-right
-      flex: 1
+      width: 1.8rem
+      .ticket-price
+        overflow: hidden
+        height: .4rem
+        text-align: center
+        color: #ff9800
+        font-size: .4rem
+      .ticket-button
+        height: .6rem
+        color: #fff
+        font-size: .28rem
+        line-height: .6rem
+        text-align: center
+        border-radius: .08rem
+        background-image: linear-gradient(130deg,#ffab1e 37%,#ff8c12 100%)
 </style>
