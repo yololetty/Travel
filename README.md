@@ -24,7 +24,7 @@ npm run build --report
 ```
 
 ## 项目演示
-![img](https://github.com/yololetty/Travel/blob/master/static/images/travel.gif)
+![img](https://raw.githubusercontent.com/yololetty/Travel/master/static/images/travel.gif)
 
 ## 使用vue优化总结
 
