@@ -24,8 +24,7 @@ npm run build --report
 ```
 
 ## 项目演示
-![img](https://ae01.alicdn.com/kf/Uf1fef368269c4914a92487af96852c10u.gif
-)
+![img](https://ae01.alicdn.com/kf/Uf1fef368269c4914a92487af96852c10u.gif)
 
 ## 使用vue优化总结
 
