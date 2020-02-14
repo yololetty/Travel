@@ -1,6 +1,11 @@
 # Travel website
 
 > A Vue.js project
+## 技术栈
+- vue
+- vue-router
+- vuex
+- webpack
 
 ## Build Setup
 
